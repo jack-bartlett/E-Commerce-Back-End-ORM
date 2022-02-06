@@ -4,11 +4,10 @@ const { Tag, Product, ProductTag } = require('../../models');
 // The `/api/tags` endpoint
 
 router.get('/', async (req, res) => {
-  const tagData = await Tag.findAll({
-    attributes: {
+  const tagData = await Tag.findAll(
+    {
       include: [Product],
-    },
-  });
+    });
 
   return res.json(tagData);
 });
@@ -18,11 +17,10 @@ router.get('/', async (req, res) => {
 
 
 router.get('/:id', async (req, res) => {
-  const tagData = await Tag.findOne({
-    attributes: {
+  const tagData = await Tag.findOne(
+    {
       include: [Product],
-    },
-  });
+    });
   return res.json(tagData);
 });
   // find a single tag by its `id`

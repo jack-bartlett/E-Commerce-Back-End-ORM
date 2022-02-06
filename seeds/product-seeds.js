@@ -1,4 +1,4 @@
-const { Product } = require('../../../course/13-ORM/02-Homework/Develop/models');
+const { Product } = require('../models');
 
 const productData = [
   {

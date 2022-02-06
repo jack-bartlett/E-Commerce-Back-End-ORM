@@ -1,5 +1,5 @@
 const express = require('express');
-const routes = require('../../course/13-ORM/02-Homework/Develop/routes');
+const routes = require('./routes/index');
 const sequelize = require("./config/connection");
 // import sequelize connection
 
